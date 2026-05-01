@@ -1,109 +1,314 @@
-Rehman Ali
-Services
-Work
-Contact
-Freelance Data Entry Specialist
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rehman Ali — Data Entry Specialist</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Source+Serif+4:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --cream: #FAF8F4;
+    --ink: #1C1A17;
+    --muted: #6B6560;
+    --accent: #8B6F47;
+    --light-border: #E5E0D8;
+    --section-pad: 80px;
+  }
+  body { font-family: 'Source Serif 4', Georgia, serif; background: var(--cream); color: var(--ink); line-height: 1.7; }
 
-Fast, accurate, & reliable data entry.
-I provide professional data entry services — from typing and copy-paste tasks to PDF conversion, Excel, Word, Urdu typing, and transcription.
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 20px 60px;
+    background: rgba(250,248,244,0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--light-border);
+  }
+  .nav-logo { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 600; color: var(--ink); text-decoration: none; letter-spacing: 0.5px; }
+  .nav-links { display: flex; gap: 36px; list-style: none; }
+  .nav-links a { font-size: 14px; color: var(--muted); text-decoration: none; letter-spacing: 0.5px; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--accent); }
 
-Start a project → View my work
-5+
-Years of experience
-120+
-Projects completed
-40+
-Happy clients
-15+
-Industries covered
-What I do
+  .hero {
+    min-height: 100vh;
+    display: flex; align-items: center;
+    padding: 120px 60px 80px;
+    max-width: 1100px; margin: 0 auto;
+  }
+  .hero-content { max-width: 640px; }
+  .hero-eyebrow { font-size: 13px; letter-spacing: 3px; text-transform: uppercase; color: var(--accent); margin-bottom: 24px; }
+  .hero-title { font-family: 'Playfair Display', serif; font-size: clamp(44px, 6vw, 72px); font-weight: 600; line-height: 1.1; margin-bottom: 28px; color: var(--ink); }
+  .hero-title em { font-style: italic; color: var(--accent); }
+  .hero-desc { font-size: 18px; color: var(--muted); line-height: 1.8; margin-bottom: 40px; font-weight: 300; }
+  .hero-cta { display: inline-flex; align-items: center; gap: 10px; padding: 14px 32px; background: var(--ink); color: var(--cream); font-family: 'Source Serif 4', serif; font-size: 15px; text-decoration: none; border-radius: 2px; transition: background 0.2s; cursor: pointer; border: none; }
+  .hero-cta:hover { background: var(--accent); }
+  .hero-cta-ghost { margin-left: 16px; display: inline-flex; align-items: center; gap: 8px; padding: 14px 32px; background: transparent; color: var(--ink); font-family: 'Source Serif 4', serif; font-size: 15px; text-decoration: none; border-radius: 2px; border: 1px solid var(--ink); transition: all 0.2s; cursor: pointer; }
+  .hero-cta-ghost:hover { border-color: var(--accent); color: var(--accent); }
 
-Services
-⌨️
-Typing
-Fast and accurate typing of documents, forms, and data with high attention to detail and quick turnaround time.
+  .divider { border: none; border-top: 1px solid var(--light-border); margin: 0 60px; }
 
-📋
-Copy Paste
-Efficient copy-paste tasks including data migration, list compilation, and content transfer between platforms.
+  section { padding: var(--section-pad) 60px; max-width: 1100px; margin: 0 auto; }
 
-📄
-PDF Conversion
-Convert PDFs to Word, Excel, or any other format quickly and accurately while preserving original formatting.
+  .section-label { font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; }
+  .section-title { font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 600; margin-bottom: 48px; color: var(--ink); }
 
-📊
-Microsoft Excel
-Data entry, formatting, formulas, and spreadsheet management in Microsoft Excel for businesses and individuals.
+  .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+  .service-card { padding: 36px 28px; border: 1px solid var(--light-border); border-radius: 4px; background: #fff; transition: box-shadow 0.2s, transform 0.2s; }
+  .service-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.06); transform: translateY(-2px); }
+  .service-icon { font-size: 28px; margin-bottom: 20px; }
+  .service-name { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 600; margin-bottom: 12px; color: var(--ink); }
+  .service-desc { font-size: 15px; color: var(--muted); line-height: 1.75; }
 
-📝
-Microsoft Word
-Professional document creation, formatting, and editing in Microsoft Word with clean and polished results.
+  .portfolio-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+  .portfolio-card { background: #fff; border: 1px solid var(--light-border); border-radius: 4px; overflow: hidden; transition: box-shadow 0.2s; }
+  .portfolio-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.07); }
+  .portfolio-img { height: 180px; display: flex; align-items: center; justify-content: center; font-size: 48px; }
+  .portfolio-body { padding: 24px; }
+  .portfolio-tag { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; }
+  .portfolio-title { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 600; margin-bottom: 10px; color: var(--ink); }
+  .portfolio-desc { font-size: 14px; color: var(--muted); line-height: 1.7; }
 
-🔤
-Urdu Typing
-Accurate Urdu typing for documents, articles, and content with proper Nastaliq formatting and presentation.
+  .testimonials { background: var(--ink); color: var(--cream); padding: var(--section-pad) 60px; }
+  .testimonials-inner { max-width: 1100px; margin: 0 auto; }
+  .testimonials .section-title { color: var(--cream); }
+  .testimonials-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+  .testimonial-card { padding: 32px; border: 1px solid rgba(255,255,255,0.12); border-radius: 4px; }
+  .testimonial-quote { font-size: 32px; color: var(--accent); font-family: 'Playfair Display', serif; line-height: 1; margin-bottom: 16px; }
+  .testimonial-text { font-size: 16px; line-height: 1.8; color: rgba(250,248,244,0.85); margin-bottom: 24px; font-weight: 300; }
+  .testimonial-author { font-size: 13px; letter-spacing: 1px; color: var(--accent); font-weight: 400; }
 
-🎧
-Transcription
-Audio and video transcription services with high accuracy, proper punctuation, and fast delivery.
+  .stats-row { display: flex; gap: 60px; padding: 60px 60px; max-width: 1100px; margin: 0 auto; border-bottom: 1px solid var(--light-border); }
+  .stat { text-align: left; }
+  .stat-number { font-family: 'Playfair Display', serif; font-size: 52px; font-weight: 600; color: var(--ink); line-height: 1; }
+  .stat-label { font-size: 14px; color: var(--muted); margin-top: 8px; }
 
-Selected Work
+  .contact-section { padding: var(--section-pad) 60px; max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+  .contact-title { font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 600; margin-bottom: 20px; }
+  .contact-desc { font-size: 16px; color: var(--muted); line-height: 1.8; margin-bottom: 32px; }
+  .contact-item { display: flex; gap: 12px; align-items: center; font-size: 15px; color: var(--muted); margin-bottom: 16px; }
+  .contact-dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; flex-shrink: 0; }
 
-Recent projects
-📊
-Microsoft Excel
+  .form-group { margin-bottom: 20px; }
+  .form-group label { display: block; font-size: 13px; letter-spacing: 1px; color: var(--muted); text-transform: uppercase; margin-bottom: 8px; }
+  .form-group input, .form-group textarea {
+    width: 100%; padding: 14px 16px;
+    border: 1px solid var(--light-border); border-radius: 2px;
+    background: #fff; color: var(--ink);
+    font-family: 'Source Serif 4', serif; font-size: 15px;
+    outline: none; transition: border-color 0.2s;
+  }
+  .form-group input:focus, .form-group textarea:focus { border-color: var(--accent); }
+  .form-group textarea { resize: vertical; min-height: 120px; }
+  .form-submit { width: 100%; padding: 16px; background: var(--ink); color: var(--cream); border: none; border-radius: 2px; font-family: 'Source Serif 4', serif; font-size: 16px; cursor: pointer; transition: background 0.2s; letter-spacing: 0.5px; }
+  .form-submit:hover { background: var(--accent); }
 
-Sales Data Entry & Formatting
-Entered and formatted 5,000+ records in Excel for a retail business, including formulas, charts, and clean data organization.
+  footer { border-top: 1px solid var(--light-border); padding: 32px 60px; display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: 0 auto; }
+  .footer-copy { font-size: 13px; color: var(--muted); }
+  .footer-social { display: flex; gap: 20px; }
+  .footer-social a { font-size: 13px; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+  .footer-social a:hover { color: var(--accent); }
 
-📄
-PDF Conversion
+  .portfolio-img.bg1 { background: #F0EAE0; }
+  .portfolio-img.bg2 { background: #E8EDF5; }
+  .portfolio-img.bg3 { background: #EDF0E8; }
+  .portfolio-img.bg4 { background: #F5EAE8; }
 
-100+ Page PDF to Word Conversion
-Converted a large legal PDF document to fully editable Word format while preserving all original formatting and structure.
+  @media (max-width: 768px) {
+    nav { padding: 16px 24px; }
+    .nav-links { display: none; }
+    .hero { padding: 100px 24px 60px; }
+    section { padding: 60px 24px; }
+    .services-grid { grid-template-columns: 1fr; }
+    .portfolio-grid { grid-template-columns: 1fr; }
+    .testimonials { padding: 60px 24px; }
+    .testimonials-grid { grid-template-columns: 1fr; }
+    .stats-row { flex-direction: column; gap: 32px; padding: 40px 24px; }
+    .contact-section { grid-template-columns: 1fr; gap: 40px; padding: 60px 24px; }
+    footer { flex-direction: column; gap: 16px; padding: 32px 24px; }
+  }
 
-🔤
-Urdu Typing
+  .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
 
-Urdu Newsletter — Monthly Publication
-Typed and formatted a monthly Urdu newsletter for an NGO with proper Nastaliq script and professional layout.
+<nav>
+  <a class="nav-logo" href="#">Rehman Ali</a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-🎧
-Transcription
+<div class="hero">
+  <div class="hero-content fade-in">
+    <p class="hero-eyebrow">Freelance Data Entry Specialist</p>
+    <h1 class="hero-title">Fast, <em>accurate,</em> & reliable data entry.</h1>
+    <p class="hero-desc">I provide professional data entry services — from typing and copy-paste tasks to PDF conversion, Excel, Word, Urdu typing, and transcription.</p>
+    <div>
+      <button class="hero-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Start a project &#8594;</button>
+      <button class="hero-cta-ghost" onclick="document.getElementById('work').scrollIntoView({behavior:'smooth'})">View my work</button>
+    </div>
+  </div>
+</div>
 
-Interview Transcription Project
-Transcribed 10+ hours of recorded interviews for a research project with 99% accuracy and on-time delivery.
+<hr class="divider">
 
-Client feedback
+<div class="stats-row">
+  <div class="stat fade-in"><div class="stat-number">5+</div><div class="stat-label">Years of experience</div></div>
+  <div class="stat fade-in"><div class="stat-number">120+</div><div class="stat-label">Projects completed</div></div>
+  <div class="stat fade-in"><div class="stat-number">40+</div><div class="stat-label">Happy clients</div></div>
+  <div class="stat fade-in"><div class="stat-number">15+</div><div class="stat-label">Industries covered</div></div>
+</div>
 
-What clients say
-"
-The copy for our landing page was exactly what we needed — clear, compelling, and on-brand. Conversions went up by 40% in the first month.
+<section id="services">
+  <p class="section-label">What I do</p>
+  <h2 class="section-title">Services</h2>
+  <div class="services-grid">
+    <div class="service-card fade-in">
+      <div class="service-icon">⌨️</div>
+      <h3 class="service-name">Typing</h3>
+      <p class="service-desc">Fast and accurate typing of documents, forms, and data with high attention to detail and quick turnaround time.</p>
+    </div>
+    <div class="service-card fade-in">
+      <div class="service-icon">📋</div>
+      <h3 class="service-name">Copy Paste</h3>
+      <p class="service-desc">Efficient copy-paste tasks including data migration, list compilation, and content transfer between platforms.</p>
+    </div>
+    <div class="service-card fade-in">
+      <div class="service-icon">📄</div>
+      <h3 class="service-name">PDF Conversion</h3>
+      <p class="service-desc">Convert PDFs to Word, Excel, or any other format quickly and accurately while preserving original formatting.</p>
+    </div>
+    <div class="service-card fade-in">
+      <div class="service-icon">📊</div>
+      <h3 class="service-name">Microsoft Excel</h3>
+      <p class="service-desc">Data entry, formatting, formulas, and spreadsheet management in Microsoft Excel for businesses and individuals.</p>
+    </div>
+    <div class="service-card fade-in">
+      <div class="service-icon">📝</div>
+      <h3 class="service-name">Microsoft Word</h3>
+      <p class="service-desc">Professional document creation, formatting, and editing in Microsoft Word with clean and polished results.</p>
+    </div>
+    <div class="service-card fade-in">
+      <div class="service-icon">🔤</div>
+      <h3 class="service-name">Urdu Typing</h3>
+      <p class="service-desc">Accurate Urdu typing for documents, articles, and content with proper Nastaliq formatting and presentation.</p>
+    </div>
+    <div class="service-card fade-in">
+      <div class="service-icon">🎧</div>
+      <h3 class="service-name">Transcription</h3>
+      <p class="service-desc">Audio and video transcription services with high accuracy, proper punctuation, and fast delivery.</p>
+    </div>
+  </div>
+</section>
 
-— Sara K., Co-founder, TechBridge
+<hr class="divider">
 
-"
-Incredibly professional. Delivered everything ahead of schedule and truly understood our brand voice from the first draft. Highly recommend.
+<section id="work">
+  <p class="section-label">Selected Work</p>
+  <h2 class="section-title">Recent projects</h2>
+  <div class="portfolio-grid">
+    <div class="portfolio-card fade-in">
+      <div class="portfolio-img bg1">📊</div>
+      <div class="portfolio-body">
+        <p class="portfolio-tag">Microsoft Excel</p>
+        <h3 class="portfolio-title">Sales Data Entry & Formatting</h3>
+        <p class="portfolio-desc">Entered and formatted 5,000+ records in Excel for a retail business, including formulas, charts, and clean data organization.</p>
+      </div>
+    </div>
+    <div class="portfolio-card fade-in">
+      <div class="portfolio-img bg2">📄</div>
+      <div class="portfolio-body">
+        <p class="portfolio-tag">PDF Conversion</p>
+        <h3 class="portfolio-title">100+ Page PDF to Word Conversion</h3>
+        <p class="portfolio-desc">Converted a large legal PDF document to fully editable Word format while preserving all original formatting and structure.</p>
+      </div>
+    </div>
+    <div class="portfolio-card fade-in">
+      <div class="portfolio-img bg3">🔤</div>
+      <div class="portfolio-body">
+        <p class="portfolio-tag">Urdu Typing</p>
+        <h3 class="portfolio-title">Urdu Newsletter — Monthly Publication</h3>
+        <p class="portfolio-desc">Typed and formatted a monthly Urdu newsletter for an NGO with proper Nastaliq script and professional layout.</p>
+      </div>
+    </div>
+    <div class="portfolio-card fade-in">
+      <div class="portfolio-img bg4">🎧</div>
+      <div class="portfolio-body">
+        <p class="portfolio-tag">Transcription</p>
+        <h3 class="portfolio-title">Interview Transcription Project</h3>
+        <p class="portfolio-desc">Transcribed 10+ hours of recorded interviews for a research project with 99% accuracy and on-time delivery.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-— Imran M., Head of Marketing, GreenLeaf
+<div class="testimonials">
+  <div class="testimonials-inner">
+    <p class="section-label" style="color: var(--accent);">Client feedback</p>
+    <h2 class="section-title">What clients say</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card fade-in">
+        <div class="testimonial-quote">"</div>
+        <p class="testimonial-text">The copy for our landing page was exactly what we needed — clear, compelling, and on-brand. Conversions went up by 40% in the first month.</p>
+        <p class="testimonial-author">— Sara K., Co-founder, TechBridge</p>
+      </div>
+      <div class="testimonial-card fade-in">
+        <div class="testimonial-quote">"</div>
+        <p class="testimonial-text">Incredibly professional. Delivered everything ahead of schedule and truly understood our brand voice from the first draft. Highly recommend.</p>
+        <p class="testimonial-author">— Imran M., Head of Marketing, GreenLeaf</p>
+      </div>
+    </div>
+  </div>
+</div>
 
-Get in touch
+<section id="contact">
+  <div class="contact-section" style="padding:0; max-width:none;">
+    <div>
+      <p class="section-label">Get in touch</p>
+      <h2 class="contact-title">Let's work together</h2>
+      <p class="contact-desc">Have a project in mind? I'd love to hear about it. Send me a message and I'll get back to you within 24 hours.</p>
+      <div class="contact-item"><span class="contact-dot"></span><span>abdulrehman6864@gmail.com</span></div>
+      <div class="contact-item"><span class="contact-dot"></span><span>Islamabad, Pakistan — Remote worldwide</span></div>
+      <div class="contact-item"><span class="contact-dot"></span><span>Available for new projects</span></div>
+    </div>
+    <div>
+      <div class="form-group">
+        <label>Your name</label>
+        <input type="text" placeholder="e.g. Ali Ahmed">
+      </div>
+      <div class="form-group">
+        <label>Email address</label>
+        <input type="email" placeholder="you@example.com">
+      </div>
+      <div class="form-group">
+        <label>Project details</label>
+        <textarea placeholder="Tell me about your project..."></textarea>
+      </div>
+      <button class="form-submit">Send message &#8594;</button>
+    </div>
+  </div>
+</section>
 
-Let's work together
-Have a project in mind? I'd love to hear about it. Send me a message and I'll get back to you within 24 hours.
+<footer>
+  <p class="footer-copy">© 2026 Rehman Ali. All rights reserved.</p>
+  <div class="footer-social">
+    <a href="#">LinkedIn</a>
+    <a href="#">Twitter</a>
+    <a href="#">Medium</a>
+  </div>
+</footer>
 
-abdulrehman6864@gmail.com
-Islamabad, Pakistan — Remote worldwide
-Available for new projects
-Your name
-e.g. Ali Ahmed
-Email address
-you@example.com
-Project details
-Tell me about your project...
-Send message →
-© 2026 Rehman Ali. All rights reserved.
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
 
-LinkedIn
-Twitter
-Medium
+</body>
+</html>
